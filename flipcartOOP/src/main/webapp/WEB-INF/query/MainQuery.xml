@@ -1,0 +1,668 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Querys>
+
+<!-- **********************************item queries***************************************** -->
+
+	<!-- Create table item Query -->
+	<query id="create_item_table">
+        <![CDATA[
+            CREATE TABLE item(
+				item_id varchar(10) not null,
+				item_name varchar(100),
+				item_desc varchar(500),
+				item_price varchar(10),
+				brand_name varchar(50),
+				category_name varchar(50),
+				discount varchar(10),
+				image_1 varchar(100),
+				image_2 varchar(100),
+				image_3 varchar(100),
+				image_4 varchar(100),
+				primary key (item_id)
+			)
+        ]]>
+	</query>
+	
+	<!-- Insert records into item table in the beginning Query -->
+	<query id="insert_item_begin">
+        <![CDATA[
+          	insert into item (item_id, item_name, item_desc, item_price, brand_name, category_name, discount, image_1, image_2, image_3, image_4) 
+          	values ('ITM201', '24\'\' UltraGear FHD 144Hz 1ms Gaming Monitor with FreeSync', 'The LG 24GL600F monitor uses a standard TN panel with a 1,000:1 static contrast ratio, a 300-nit peak brightness, and dithered 8-bit color depth (6-bit + 2-bit FRC, 16.7 million colors). Like all TN panels, you get the narrow 160 (vertically) and 170 (horizontally) viewing angles meaning that the image will shift in color, contrast, and brightness when you look at it from skewed angles.', '95000', 'Samsung', 'Mobile', '10000', 'pic_slid_01_0.png', 'pic_slid_03.png', 'pic_slid_04.png', 'pic_slid_05.png'),
+          	('ITM202', 'iPhone X Silver - 64GB', 'The iPhone X, The edge-to-edge top-to-bottom Super Retina display adopts OLED technology for true-to-life colors, deep blacks, and a million-to-one contrast ratio. It features a 2436 x 1125 resolution and 458 pixels per inch. It supports HDR, wide color, 3D Touch, and True Tone for adjusting the white balance of the display to match the ambient lighting.', '166999', 'Apple', 'Mobile', '10000', 'pic_07.png', 'pic_07_slide_01.png', 'pic_07_slide_02.png', 'pic_07_slide_03.png'),
+			('ITM203', 'HP Laptop - 17z touch optional', 'Designed for long-lasting performance, this stylishly designed HP 17 laptop has a long-lasting battery that keeps you connected, entertained, and productive all day. Speed through tasks, or sit back and socialize with an AMD processor and a rich display. Do it all, all day. A laptop with the power to surf, stream, and do so much more with an AMD processorPlus extensive quality testing ensures that you can keep going...and going.', '61000', 'HP', 'Laptop', '15000', 'pic_carusel_01.png', 'pic_carusel_slide_01.png', 'pic_carusel_slide_02.png', 'pic_carusel_slie_03.png')
+        ]]>
+       
+	</query>
+
+	<!-- DROP TABLE item Query -->
+	<query id="drop_item_table">
+         <![CDATA[        
+            DROP TABLE IF EXISTS item 
+        ]]>
+	</query>
+
+	<!-- Add new item Query -->
+	<query id="insert_item">
+        <![CDATA[
+          	insert into item (item_id, item_name, item_desc, item_price, brand_name, category_name, discount, image_1, image_2, image_3, image_4) 
+          	values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+        ]]>
+	</query>
+
+	<!-- Select a particular item by id Query -->
+	<query id="item_by_id">
+         <![CDATA[        
+            select * from item where item.item_id = ?
+        ]]>
+	</query>
+
+	<!-- Select all items -->
+	<query id="all_items">
+         <![CDATA[        
+            select * from item
+        ]]>
+	</query>
+
+	<!-- Delete a particular item by id Query -->
+	<query id="remove_item">
+         <![CDATA[        
+            delete from item where item.item_id = ?
+        ]]>
+	</query>
+	
+	<!-- Update a particular item by id Query -->
+	<query id="update_item">
+         <![CDATA[        
+            update item as e 
+            set e.item_name = ?, e.item_desc = ?, e.item_price = ?, e.brand_name = ?, e.category_name = ?, e.discount = ?, e.image_1 = ?, e.image_2 = ?, e.image_3 = ?, e.image_4 = ? 
+            where e.item_id = ?
+        ]]>
+	</query>
+	
+		<!-- Get item IDs Query -->
+	<query id="item_ids">
+         <![CDATA[        
+            select e.item_id from item as e
+        ]]>
+	</query>
+	
+	<!-- Count items Query -->
+	<query id="count_items">
+         <![CDATA[        
+            select count(*) from item
+        ]]>
+	</query>
+
+<!-- **********************************End of item queries***************************************** -->
+
+
+<!-- **********************************category queries***************************************** -->
+
+	<!-- Create table category Query -->
+	<query id="create_category_table">
+        <![CDATA[
+            CREATE TABLE category(
+				category_id varchar(10) not null,
+				category_name varchar(50),
+				status varchar(10),
+				primary key (category_id)
+			)
+        ]]>
+	</query>
+	
+	<!-- Insert records into category table in the beginning Query -->
+	<query id="insert_category_begin">
+        <![CDATA[
+          	insert into category (category_id, category_name, status) 
+          	values ('CAT201', 'Mobile', 'Active'),
+          	('CAT202', 'Laptops', 'Active'),
+			('CAT203', 'Cameras', 'Active'),
+			('CAT204', 'Tablets', 'Active'),
+			('CAT205', 'Desktops', 'Active'),
+			('CAT206', 'TV & Video', 'Active') 
+        ]]>
+	</query>
+
+	<!-- DROP TABLE category Query -->
+	<query id="drop_category_table">
+         <![CDATA[        
+            DROP TABLE IF EXISTS category 
+        ]]>
+	</query>
+
+	<!-- Add new category Query -->
+	<query id="insert_category">
+        <![CDATA[
+          	insert into category (category_id, category_name, status) 
+          	values (?, ?, ?)
+        ]]>
+	</query>
+
+	<!-- Select a particular category by id Query -->
+	<query id="category_by_id">
+         <![CDATA[        
+            select * from category where category.category_id = ?
+        ]]>
+	</query>
+
+	<!-- Select all categories -->
+	<query id="all_categories">
+         <![CDATA[        
+            select * from category
+        ]]>
+	</query>
+
+	<!-- Delete a particular category by id Query -->
+	<query id="remove_category">
+         <![CDATA[        
+            delete from category where category.category_id = ?
+        ]]>
+	</query>
+	
+	<!-- Update a particular category by id Query -->
+	<query id="update_category">
+         <![CDATA[        
+            update category as c 
+            set c.category_name = ?, c.status = ? 
+            where c.category_id = ?
+        ]]>
+	</query>
+	
+		<!-- Get category IDs Query -->
+	<query id="category_ids">
+         <![CDATA[        
+            select c.category_id from category as c
+        ]]>
+	</query>
+	
+	<!-- Count categories Query -->
+	<query id="count_categories">
+         <![CDATA[        
+            select count(*) from category
+        ]]>
+	</query>
+
+<!-- **********************************End of category queries************************************* -->
+
+
+<!-- **********************************seller queries*************************************** -->
+
+	<!-- Create table seller Query -->
+	<query id="create_seller_table">
+        <![CDATA[
+            CREATE TABLE seller(
+				seller_id varchar(10) not null,
+				first_name varchar(50),
+				last_name varchar(50),
+				nic varchar(10),
+				mobile_number varchar(10),
+				acc_number varchar(10),
+				email varchar(50),
+				address varchar(200),
+				primary key (seller_id)
+			)
+        ]]>
+	</query>
+
+	<!-- DROP TABLE seller Query -->
+	<query id="drop_seller_table">
+         <![CDATA[        
+            DROP TABLE IF EXISTS seller 
+        ]]>
+	</query>
+
+	<!-- Add new seller Query -->
+	<query id="insert_seller">
+        <![CDATA[
+          	insert into seller (seller_id, first_name, last_name, nic, mobile_number, acc_number, email, address) 
+          	values (?, ?, ?, ?, ?, ?, ?, ?)
+        ]]>
+	</query>
+
+	<!-- Select a particular seller by id Query -->
+	<query id="seller_by_id">
+         <![CDATA[        
+            select * from seller where seller.seller_id = ?
+        ]]>
+	</query>
+
+	<!-- Select all sellers -->
+	<query id="all_sellers">
+         <![CDATA[        
+            select * from seller
+        ]]>
+	</query>
+
+	<!-- Delete a particular seller by id Query -->
+	<query id="remove_seller">
+         <![CDATA[        
+            delete from seller where seller.seller_id = ?
+        ]]>
+	</query>
+	
+	<!-- Update a particular seller by id Query -->
+	<query id="update_seller">
+         <![CDATA[        
+            update seller as s 
+            set s.first_name = ?, s.last_name = ?, s.nic = ?, s.mobile_number = ?, s.acc_number = ?, s.email = ?, s.address = ? 
+            where s.seller_id = ?
+        ]]>
+	</query>
+	
+		<!-- Get seller IDs Query -->
+	<query id="seller_ids">
+         <![CDATA[        
+            select s.seller_id from seller as s
+        ]]>
+	</query>
+	
+	<!-- Count sellers Query -->
+	<query id="count_sellers">
+         <![CDATA[        
+            select count(*) from seller
+        ]]>
+	</query>
+
+<!-- **********************************End of seller queries*************************************** -->
+
+
+<!-- **********************************payment queries************************************** -->
+
+	<!-- Create table payment Query -->
+	<query id="create_payment_table">
+        <![CDATA[
+            CREATE TABLE payment(
+				payment_id varchar(10) not null,
+				payment_type varchar(50),
+				amount varchar(100),
+				customer_id varchar(10) not null,
+				seller_id varchar(10) not null,
+				paid_date varchar(10) not null,
+				primary key (payment_id)
+			)
+        ]]>
+	</query>
+
+	<!-- DROP TABLE payment Query -->
+	<query id="drop_payment_table">
+         <![CDATA[        
+            DROP TABLE IF EXISTS payment 
+        ]]>
+	</query>
+
+	<!-- Add new payment Query -->
+	<query id="insert_payment">
+        <![CDATA[
+          	insert into payment (payment_id, payment_type, amount, customer_id, seller_id, paid_date) 
+          	values (?, ?, ?, ?, ?, ?)
+        ]]>
+	</query>
+
+	<!-- Select a particular payment by id Query -->
+	<query id="payment_by_id">
+         <![CDATA[        
+            select * from payment where payment.payment_id = ?
+        ]]>
+	</query>
+
+	<!-- Select all payments -->
+	<query id="all_payments">
+         <![CDATA[        
+            select * from payment
+        ]]>
+	</query>
+
+	<!-- Delete a particular payment by id Query -->
+	<query id="remove_payment">
+         <![CDATA[        
+            delete from payment where payment.payment_id = ?
+        ]]>
+	</query>
+	
+	<!-- Update a particular payment by id Query -->
+	<query id="update_payment">
+         <![CDATA[        
+            update payment as p 
+            set p.payment_type = ?, p.amount = ?, p.customer_id = ?, p.seller_id = ?, p.paid_date = ?
+            where p.payment_id = ?
+        ]]>
+	</query>
+	
+		<!-- Get payment IDs Query -->
+	<query id="payment_ids">
+         <![CDATA[        
+            select p.payment_id from payment as p
+        ]]>
+	</query>
+
+<!-- **********************************End of payment queries************************************** -->
+
+
+<!-- **********************************admin queries**************************************** -->
+
+	<!-- Create table admin Query -->
+	<query id="create_admin_table">
+        <![CDATA[
+            CREATE TABLE admin(
+				admin_id varchar(10) not null,
+				first_name varchar(50),
+				last_name varchar(50),
+				user_name varchar(10),
+				email varchar(50),
+				password varchar(30),
+				primary key (admin_id)
+			)
+        ]]>
+	</query>
+	
+	<!-- Insert records into admin table in the beginning Query -->
+	<query id="insert_admin_begin">
+        <![CDATA[
+          	insert into admin (admin_id, first_name, last_name, user_name, email, password) 
+          	values ('AD201', 'David', 'Odugama', 'davidoo', 'david@gmail.com', 'david123'), 
+          	('AD202', 'Miyuru', 'Kanishka', 'MiyuruW', 'miyuru@gmail.com', 'optimus')
+        ]]>
+	</query>
+
+	<!-- DROP TABLE admin Query -->
+	<query id="drop_admin_table">
+         <![CDATA[        
+            DROP TABLE IF EXISTS admin 
+        ]]>
+	</query>
+
+	<!-- Add new admin Query -->
+	<query id="insert_admin">
+        <![CDATA[
+          	insert into admin (admin_id, first_name, last_name, user_name, email, password) 
+          	values (?, ?, ?, ?, ?, ?)
+        ]]>
+	</query>
+
+	<!-- Select a particular admin by id Query -->
+	<query id="admin_by_id">
+         <![CDATA[        
+            select * from admin where admin.admin_id = ?
+        ]]>
+	</query>
+
+	<!-- Select all admins -->
+	<query id="all_admins">
+         <![CDATA[        
+            select * from admin
+        ]]>
+	</query>
+
+	<!-- Delete a particular admin by id Query -->
+	<query id="remove_admin">
+         <![CDATA[        
+            delete from admin where admin.admin_id = ?
+        ]]>
+	</query>
+	
+	<!-- Update a particular admin by id Query -->
+	<query id="update_admin">
+         <![CDATA[        
+            update admin as a 
+            set a.first_name = ?, a.last_name = ?, a.user_name = ?, a.email = ?, a.password = ? 
+            where a.admin_id = ?
+        ]]>
+	</query>
+	
+		<!-- Get admin IDs Query -->
+	<query id="admin_ids">
+         <![CDATA[        
+            select a.admin_id from admin as a
+        ]]>
+	</query>
+	
+	<!-- Count admins Query -->
+	<query id="count_admins">
+         <![CDATA[        
+            select count(*) from admin
+        ]]>
+	</query>
+
+<!-- **********************************End of admin queries**************************************** -->
+
+<!-- **********************************review queries***************************************** -->
+
+	<!-- Create table review Query -->
+	<query id="create_review_table">
+        <![CDATA[
+            CREATE TABLE review(
+				review_id varchar(10) primary key not null,
+				customer_id varchar(10) not null,
+				item_id varchar(10) not null,
+				email varchar(50),
+				contact varchar(10),
+				review_desc varchar(500),
+				seller_id varchar(10),
+				review_type char(1)
+			)
+        ]]>
+	</query>
+
+	<!-- DROP TABLE Reviews Query -->
+	<query id="drop_review_table">
+         <![CDATA[        
+            DROP TABLE IF EXISTS review 
+        ]]>
+	</query>
+
+	<!-- Add new review Query -->
+	<query id="insert_review">
+        <![CDATA[
+          	insert into review (review_id, customer_id, item_id, email, contact, review_desc, seller_id, review_type) 
+          	values (?, ?, ?, ?, ?, ?, ?, ?)
+        ]]>
+	</query>
+
+	<!-- Select a particular review by id Query -->
+	<query id="review_by_id">
+         <![CDATA[        
+            select * from review where review.review_id = ?
+        ]]>
+	</query>
+
+	<!-- Select all review -->
+	<query id="all_reviews">
+         <![CDATA[        
+            select * from review
+        ]]>
+	</query>
+
+	<!-- Delete a particular review by id Query -->
+	<query id="remove_review">
+         <![CDATA[        
+            delete from review where review.review_id = ?
+        ]]>
+	</query>
+	
+	<!-- Update a particular review by id Query -->
+	<query id="update_review">
+         <![CDATA[        
+            update review as r 
+            set r.customer_id = ?, r.item_id = ?, r.email = ?, r.contact = ?, r.review_desc = ?, r.seller_id  = ?, r.review_type = ? 
+            where r.review_id = ?
+        ]]>
+	</query>
+	
+		<!-- Get review IDs Query -->
+	<query id="review_ids">
+         <![CDATA[        
+            select r.review_id from review as r
+        ]]>
+	</query>
+	
+	<!-- Count reviews Query -->
+	<query id="count_reviews">
+         <![CDATA[        
+            select count(*) from review
+            where review.review_type = 'C'
+        ]]>
+	</query>
+	
+	<!-- Select a particular review by item id Query -->
+	<query id="review_by_item_id">
+         <![CDATA[        
+            select * from review where review.item_id = ?
+        ]]>
+	</query>
+
+<!-- **********************************End of review queries**************************************** -->
+
+<!-- **********************************customer queries***************************************** -->
+
+	<!-- Create table customer Query -->
+	<query id="create_customer_table">
+        <![CDATA[
+            CREATE TABLE customer(
+				customer_id varchar(10) primary key not null,
+				first_name varchar(50),
+				last_name varchar(50),
+				user_name varchar(10),
+				contact_number varchar(10),
+				email varchar(30),
+				password varchar(20)
+			)
+        ]]>
+	</query>
+
+	<!-- DROP TABLE customers Query -->
+	<query id="drop_customer_table">
+         <![CDATA[        
+            DROP TABLE IF EXISTS customer 
+        ]]>
+	</query>
+
+	<!-- Add new customer Query -->
+	<query id="insert_customer">
+        <![CDATA[
+          	insert into customer (customer_id, first_name, last_name, user_name, contact_number, email, password) 
+          	values (?, ?, ?, ?, ?, ?, ?)
+        ]]>
+	</query>
+
+	<!-- Select a particular customer by id Query -->
+	<query id="customer_by_id">
+         <![CDATA[        
+            select * from customer where customer.customer_id = ?
+        ]]>
+	</query>
+
+	<!-- Select all customer -->
+	<query id="all_customers">
+         <![CDATA[        
+            select * from customer
+        ]]>
+	</query>
+
+	<!-- Delete a particular customer by id Query -->
+	<query id="remove_customer">
+         <![CDATA[        
+            delete from customer where customer.customer_id = ?
+        ]]>
+	</query>
+	
+	<!-- Update a particular customer by id Query -->
+	<query id="update_customer">
+         <![CDATA[        
+            update customer as c 
+            set c.first_name = ?, c.last_name = ?, c.user_name = ?, c.contact_number = ?, c.email = ?, c.password  = ? 
+            where c.customer_id = ?
+        ]]>
+	</query>
+	
+		<!-- Get customer IDs Query -->
+	<query id="customer_ids">
+         <![CDATA[        
+            select c.customer_id from customer as c
+        ]]>
+	</query>
+	
+	<!-- Count customers Query -->
+	<query id="count_customers">
+         <![CDATA[        
+            select count(*) from customer
+        ]]>
+	</query>
+
+<!-- **********************************End of customer queries**************************************** -->
+
+<!-- **********************************cart queries***************************************** -->
+
+	<!-- Create table cart Query -->
+	<query id="create_cart_table">
+        <![CDATA[
+            CREATE TABLE cart(
+            	cart_id varchar(10) not null,
+				item_id varchar(10) not null,
+				item_name varchar(100),
+				price float,
+				quantity int,
+				total float,
+				sub_total float,
+				shipment float,
+				total_amount float,
+				primary key (cart_id)
+			)
+        ]]>
+	</query>
+
+	<!-- DROP TABLE cart Query -->
+	<query id="drop_cart_table">
+         <![CDATA[        
+            DROP TABLE IF EXISTS cart 
+        ]]>
+	</query>
+
+	<!-- Add new cart Query -->
+	<query id="insert_cart">
+        <![CDATA[
+          	insert into cart (cart_id, item_id, item_name, price, quantity, total, sub_total, shipment, total_amount) 
+          	values (?, ?, ?, ?, ?, ?, ?, ?, ?)
+        ]]>
+	</query>
+
+	<!-- Select a particular cart by id Query -->
+	<query id="cart_by_id">
+         <![CDATA[        
+            select * from cart where cart.cart_id = ?
+        ]]>
+	</query>
+
+	<!-- Select all carts -->
+	<query id="all_carts">
+         <![CDATA[        
+            select * from cart
+        ]]>
+	</query>
+
+	<!-- Delete a particular cart by id Query -->
+	<query id="remove_cart">
+         <![CDATA[        
+            delete from cart where cart.cart_id = ?
+        ]]>
+	</query>
+	
+	<!-- Update a particular cart by id Query -->
+	<query id="update_cart">
+         <![CDATA[        
+            update cart as c 
+            set c.item_id = ?, c.item_name = ?, c.price = ?, c.quantity = ?, c.total = ?, c.sub_total = ?, c.shipment = ?, c.total_amount = ? 
+            where c.cart_id = ?
+        ]]>
+	</query>
+	
+		<!-- Get cart IDs Query -->
+	<query id="cart_ids">
+         <![CDATA[        
+            select c.cart_id from cart as c
+        ]]>
+	</query>
+	
+
+<!-- **********************************End of cart queries***************************************** -->
+
+</Querys>

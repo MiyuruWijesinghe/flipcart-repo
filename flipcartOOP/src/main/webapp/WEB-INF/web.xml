@@ -1,0 +1,593 @@
+<!DOCTYPE web-app PUBLIC
+ "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+ "http://java.sun.com/dtd/web-app_2_3.dtd" >
+
+<web-app>
+	<display-name>Archetype Created Web Application</display-name>
+
+	
+	<servlet>
+		<servlet-name>AddItemServlet</servlet-name>
+		<servlet-class>com.flipcart.servlet.AddItemServlet</servlet-class>
+	</servlet>
+
+	<servlet>
+		<servlet-name>GetItemServlet</servlet-name>
+		<servlet-class>com.flipcart.servlet.GetItemServlet</servlet-class>
+	</servlet>
+
+	<servlet>
+		<servlet-name>UpdateItemServlet</servlet-name>
+		<servlet-class>com.flipcart.servlet.UpdateItemServlet</servlet-class>
+	</servlet>
+
+	<servlet>
+		<servlet-name>DeleteItemServlet</servlet-name>
+		<servlet-class>com.flipcart.servlet.DeleteItemServlet</servlet-class>
+	</servlet>
+	
+	<servlet>
+		<servlet-name>AddCategoryServlet</servlet-name>
+		<servlet-class>com.flipcart.servlet.AddCategoryServlet</servlet-class>
+	</servlet>
+	
+	<servlet>
+		<servlet-name>GetCategoryServlet</servlet-name>
+		<servlet-class>com.flipcart.servlet.GetCategoryServlet</servlet-class>
+	</servlet>
+	
+	<servlet>
+		<servlet-name>UpdateCategoryServlet</servlet-name>
+		<servlet-class>com.flipcart.servlet.UpdateCategoryServlet</servlet-class>
+	</servlet>
+	
+	<servlet>
+		<servlet-name>DeleteCategoryServlet</servlet-name>
+		<servlet-class>com.flipcart.servlet.DeleteCategoryServlet</servlet-class>
+	</servlet>
+	
+	<servlet>
+		<servlet-name>AddSellerServlet</servlet-name>
+		<servlet-class>com.flipcart.servlet.AddSellerServlet</servlet-class>
+	</servlet>
+	
+	<servlet>
+		<servlet-name>GetSellerServlet</servlet-name>
+		<servlet-class>com.flipcart.servlet.GetSellerServlet</servlet-class>
+	</servlet>
+	
+	<servlet>
+		<servlet-name>UpdateSellerServlet</servlet-name>
+		<servlet-class>com.flipcart.servlet.UpdateSellerServlet</servlet-class>
+	</servlet>
+	
+	<servlet>
+		<servlet-name>DeleteSellerServlet</servlet-name>
+		<servlet-class>com.flipcart.servlet.DeleteSellerServlet</servlet-class>
+	</servlet>
+	
+	<servlet>
+		<servlet-name>AddAdministratorServlet</servlet-name>
+		<servlet-class>com.flipcart.servlet.AddAdministratorServlet</servlet-class>
+	</servlet>
+	
+	<servlet>
+		<servlet-name>GetAdministratorServlet</servlet-name>
+		<servlet-class>com.flipcart.servlet.GetAdministratorServlet</servlet-class>
+	</servlet>
+	
+	<servlet>
+		<servlet-name>UpdateAdministratorServlet</servlet-name>
+		<servlet-class>com.flipcart.servlet.UpdateAdministratorServlet</servlet-class>
+	</servlet>
+	
+	<servlet>
+		<servlet-name>DeleteAdministratorServlet</servlet-name>
+		<servlet-class>com.flipcart.servlet.DeleteAdministratorServlet</servlet-class>
+	</servlet>
+	
+	<servlet>
+		<servlet-name>AddPaymentServlet</servlet-name>
+		<servlet-class>com.flipcart.servlet.AddPaymentServlet</servlet-class>
+	</servlet>
+	
+	<servlet>
+		<servlet-name>GetPaymentServlet</servlet-name>
+		<servlet-class>com.flipcart.servlet.GetPaymentServlet</servlet-class>
+	</servlet>	
+	
+	<servlet>
+		<servlet-name>UpdatePaymentServlet</servlet-name>
+		<servlet-class>com.flipcart.servlet.UpdatePaymentServlet</servlet-class>
+	</servlet>
+	
+	<servlet>
+		<servlet-name>DeletePaymentServlet</servlet-name>
+		<servlet-class>com.flipcart.servlet.DeletePaymentServlet</servlet-class>
+	</servlet>
+	
+	<servlet>
+		<servlet-name>AddReviewServlet</servlet-name>
+		<servlet-class>com.flipcart.servlet.AddReviewServlet</servlet-class>
+	</servlet>
+	
+	<servlet>
+		<servlet-name>GetReviewServlet</servlet-name>
+		<servlet-class>com.flipcart.servlet.GetReviewServlet</servlet-class>
+	</servlet>
+	
+	<servlet>
+		<servlet-name>UpdateReviewServlet</servlet-name>
+		<servlet-class>com.flipcart.servlet.UpdateReviewServlet</servlet-class>
+	</servlet>
+	
+	<servlet>
+		<servlet-name>DeleteReviewServlet</servlet-name>
+		<servlet-class>com.flipcart.servlet.DeleteReviewServlet</servlet-class>
+	</servlet>
+	
+	<servlet>
+		<servlet-name>AdminLoginServlet</servlet-name>
+		<servlet-class>com.flipcart.servlet.AdminLoginServlet</servlet-class>
+	</servlet>
+	
+	<servlet>
+		<servlet-name>AdminLogoutServlet</servlet-name>
+		<servlet-class>com.flipcart.servlet.AdminLogoutServlet</servlet-class>
+	</servlet>
+
+	<servlet>
+		<servlet-name>AddCustomerServlet</servlet-name>
+		<servlet-class>com.flipcart.servlet.AddCustomerServlet</servlet-class>
+	</servlet>
+	
+	<servlet>
+		<servlet-name>GetCustomerServlet</servlet-name>
+		<servlet-class>com.flipcart.servlet.GetCustomerServlet</servlet-class>
+	</servlet>
+	
+	<servlet>
+		<servlet-name>UpdateCustomerServlet</servlet-name>
+		<servlet-class>com.flipcart.servlet.UpdateCustomerServlet</servlet-class>
+	</servlet>
+	
+	<servlet>
+		<servlet-name>DeleteCustomerServlet</servlet-name>
+		<servlet-class>com.flipcart.servlet.DeleteCustomerServlet</servlet-class>
+	</servlet>
+	
+	<servlet>
+		<servlet-name>CustomerLoginServlet</servlet-name>
+		<servlet-class>com.flipcart.servlet.CustomerLoginServlet</servlet-class>
+	</servlet>
+	
+	<servlet>
+		<servlet-name>CustomerLogoutServlet</servlet-name>
+		<servlet-class>com.flipcart.servlet.CustomerLogoutServlet</servlet-class>
+	</servlet>
+	
+	<servlet>
+		<servlet-name>AddCartServlet</servlet-name>
+		<servlet-class>com.flipcart.servlet.AddCartServlet</servlet-class>
+	</servlet>
+	
+	<servlet>
+		<servlet-name>GetItemFrontServlet</servlet-name>
+		<servlet-class>com.flipcart.servlet.GetItemFrontServlet</servlet-class>
+	</servlet>
+	
+	<servlet>
+		<servlet-name>DeleteCartServlet</servlet-name>
+		<servlet-class>com.flipcart.servlet.DeleteCartServlet</servlet-class>
+	</servlet>
+	
+	<!-- ************servlets for urls******************* -->
+	
+	<servlet>
+		<servlet-name>AboutUs</servlet-name>
+		<jsp-file>/WEB-INF/views/aboutUs.jsp</jsp-file>
+	</servlet>
+	
+	<servlet>
+		<servlet-name>ItemListFront</servlet-name>
+		<jsp-file>/WEB-INF/views/itemListFront.jsp</jsp-file>
+	</servlet>
+	
+	<servlet>
+		<servlet-name>ItemListBack</servlet-name>
+		<jsp-file>/WEB-INF/views/itemList.jsp</jsp-file>
+	</servlet>
+	
+	<servlet>
+		<servlet-name>ItemAdd</servlet-name>
+		<jsp-file>/WEB-INF/views/itemAdd.jsp</jsp-file>
+	</servlet>
+
+	<servlet>
+		<servlet-name>ItemGetFront</servlet-name>
+		<jsp-file>/WEB-INF/views/itemGetFront.jsp</jsp-file>
+	</servlet>
+	
+	<servlet>
+		<servlet-name>Dashboard</servlet-name>
+		<jsp-file>/WEB-INF/views/dashboard.jsp</jsp-file>
+	</servlet>
+	
+	<servlet>
+		<servlet-name>CategoryList</servlet-name>
+		<jsp-file>/WEB-INF/views/categoryList.jsp</jsp-file>
+	</servlet>
+	
+	<servlet>
+		<servlet-name>CategoryAdd</servlet-name>
+		<jsp-file>/WEB-INF/views/categoryAdd.jsp</jsp-file>
+	</servlet>
+	
+	<servlet>
+		<servlet-name>SellerList</servlet-name>
+		<jsp-file>/WEB-INF/views/sellerList.jsp</jsp-file>
+	</servlet>
+	
+	<servlet>
+		<servlet-name>SellerAdd</servlet-name>
+		<jsp-file>/WEB-INF/views/sellerAdd.jsp</jsp-file>
+	</servlet>
+	
+	<servlet>
+		<servlet-name>AdminList</servlet-name>
+		<jsp-file>/WEB-INF/views/adminList.jsp</jsp-file>
+	</servlet>
+	
+	<servlet>
+		<servlet-name>AdminAdd</servlet-name>
+		<jsp-file>/WEB-INF/views/adminAdd.jsp</jsp-file>
+	</servlet>
+	
+	<servlet>
+		<servlet-name>PaymentList</servlet-name>
+		<jsp-file>/WEB-INF/views/paymentList.jsp</jsp-file>
+	</servlet>
+	
+	<servlet>
+		<servlet-name>PaymentAdd</servlet-name>
+		<jsp-file>/WEB-INF/views/paymentAdd.jsp</jsp-file>
+	</servlet>
+	
+	<servlet>
+		<servlet-name>ReviewList</servlet-name>
+		<jsp-file>/WEB-INF/views/reviewList.jsp</jsp-file>
+	</servlet>
+	
+	<servlet>
+		<servlet-name>ReviewAdd</servlet-name>
+		<jsp-file>/WEB-INF/views/reviewAdd.jsp</jsp-file>
+	</servlet>
+	
+	<servlet>
+		<servlet-name>ReviewAddFront</servlet-name>
+		<jsp-file>/WEB-INF/views/reviewAddFront.jsp</jsp-file>
+	</servlet>
+	
+	<servlet>
+		<servlet-name>AdminLogin</servlet-name>
+		<jsp-file>/WEB-INF/views/Adminlogin.jsp</jsp-file>
+	</servlet>
+	
+	<servlet>
+		<servlet-name>Register</servlet-name>
+		<jsp-file>/WEB-INF/views/register.jsp</jsp-file>
+	</servlet>
+	
+	<servlet>
+		<servlet-name>CustomerList</servlet-name>
+		<jsp-file>/WEB-INF/views/customerList.jsp</jsp-file>
+	</servlet>
+	
+	<servlet>
+		<servlet-name>CustomerLogin</servlet-name>
+		<jsp-file>/WEB-INF/views/login.jsp</jsp-file>
+	</servlet>
+	
+	<servlet>
+		<servlet-name>Cart</servlet-name>
+		<jsp-file>/WEB-INF/views/cart.jsp</jsp-file>
+	</servlet>
+	
+	
+	<!-- ************end of servlets for urls******************* -->
+
+	<!-- ************servlet mappings for urls******************* -->
+
+	<servlet-mapping>
+		<servlet-name>AboutUs</servlet-name>
+		<url-pattern>/aboutus-page/*</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>ItemListFront</servlet-name>
+		<url-pattern>/item-list-page/*</url-pattern>
+	</servlet-mapping>
+	
+	<servlet-mapping>
+		<servlet-name>ItemListBack</servlet-name>
+		<url-pattern>/item-list-back-page/*</url-pattern>
+	</servlet-mapping>
+	
+	<servlet-mapping>
+		<servlet-name>ItemAdd</servlet-name>
+		<url-pattern>/item-add-page/*</url-pattern>
+	</servlet-mapping>
+	
+	<servlet-mapping>
+		<servlet-name>ItemGetFront</servlet-name>
+		<url-pattern>/item-page/*</url-pattern>
+	</servlet-mapping>
+		
+	<servlet-mapping>
+		<servlet-name>Dashboard</servlet-name>
+		<url-pattern>/dashboard-page/*</url-pattern>
+	</servlet-mapping>
+		
+	<servlet-mapping>
+		<servlet-name>CategoryList</servlet-name>
+		<url-pattern>/category-list-page/*</url-pattern>
+	</servlet-mapping>
+	
+	<servlet-mapping>
+		<servlet-name>CategoryAdd</servlet-name>
+		<url-pattern>/category-add-page/*</url-pattern>
+	</servlet-mapping>
+	
+	<servlet-mapping>
+		<servlet-name>SellerList</servlet-name>
+		<url-pattern>/seller-list-page/*</url-pattern>
+	</servlet-mapping>
+	
+	<servlet-mapping>
+		<servlet-name>SellerAdd</servlet-name>
+		<url-pattern>/seller-add-page/*</url-pattern>
+	</servlet-mapping>
+	
+	<servlet-mapping>
+		<servlet-name>AdminList</servlet-name>
+		<url-pattern>/admin-list-page/*</url-pattern>
+	</servlet-mapping>
+	
+	<servlet-mapping>
+		<servlet-name>AdminAdd</servlet-name>
+		<url-pattern>/admin-add-page/*</url-pattern>
+	</servlet-mapping>
+	
+	<servlet-mapping>
+		<servlet-name>PaymentList</servlet-name>
+		<url-pattern>/payment-list-page/*</url-pattern>
+	</servlet-mapping>
+	
+	<servlet-mapping>
+		<servlet-name>PaymentAdd</servlet-name>
+		<url-pattern>/payment-add-page/*</url-pattern>
+	</servlet-mapping>
+	
+	<servlet-mapping>
+		<servlet-name>ReviewList</servlet-name>
+		<url-pattern>/review-list-page/*</url-pattern>
+	</servlet-mapping>
+	
+	<servlet-mapping>
+		<servlet-name>ReviewAdd</servlet-name>
+		<url-pattern>/review-add-page/*</url-pattern>
+	</servlet-mapping>
+	
+	<servlet-mapping>
+		<servlet-name>ReviewAddFront</servlet-name>
+		<url-pattern>/review-add-front-page/*</url-pattern>
+	</servlet-mapping>
+	
+	<servlet-mapping>
+		<servlet-name>AdminLogin</servlet-name>
+		<url-pattern>/admin-login-page/*</url-pattern>
+	</servlet-mapping>
+	
+	<servlet-mapping>
+		<servlet-name>Register</servlet-name>
+		<url-pattern>/register-page/*</url-pattern>
+	</servlet-mapping>
+	
+	<servlet-mapping>
+		<servlet-name>CustomerList</servlet-name>
+		<url-pattern>/customer-list-page/*</url-pattern>
+	</servlet-mapping>
+	
+	<servlet-mapping>
+		<servlet-name>CustomerLogin</servlet-name>
+		<url-pattern>/login-page/*</url-pattern>
+	</servlet-mapping>
+	
+	<servlet-mapping>
+		<servlet-name>Cart</servlet-name>
+		<url-pattern>/cart-page/*</url-pattern>
+	</servlet-mapping>
+	
+	<!-- ************end of servlet mappings for urls******************* -->
+
+
+
+	<!-- ***************servlet mappings***************** -->
+
+	
+	<servlet-mapping>
+		<servlet-name>AddItemServlet</servlet-name>
+		<url-pattern>/AddItemServlet</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>GetItemServlet</servlet-name>
+		<url-pattern>/GetItemServlet</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>UpdateItemServlet</servlet-name>
+		<url-pattern>/UpdateItemServlet</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>DeleteItemServlet</servlet-name>
+		<url-pattern>/DeleteItemServlet</url-pattern>
+	</servlet-mapping>
+	
+	<servlet-mapping>
+		<servlet-name>AddCategoryServlet</servlet-name>
+		<url-pattern>/AddCategoryServlet</url-pattern>
+	</servlet-mapping>
+	
+	<servlet-mapping>
+		<servlet-name>GetCategoryServlet</servlet-name>
+		<url-pattern>/GetCategoryServlet</url-pattern>
+	</servlet-mapping>
+	
+	<servlet-mapping>
+		<servlet-name>UpdateCategoryServlet</servlet-name>
+		<url-pattern>/UpdateCategoryServlet</url-pattern>
+	</servlet-mapping>
+	
+	<servlet-mapping>
+		<servlet-name>DeleteCategoryServlet</servlet-name>
+		<url-pattern>/DeleteCategoryServlet</url-pattern>
+	</servlet-mapping>
+	
+	<servlet-mapping>
+		<servlet-name>AddSellerServlet</servlet-name>
+		<url-pattern>/AddSellerServlet</url-pattern>
+	</servlet-mapping>
+	
+	<servlet-mapping>
+		<servlet-name>GetSellerServlet</servlet-name>
+		<url-pattern>/GetSellerServlet</url-pattern>
+	</servlet-mapping>
+	
+	<servlet-mapping>
+		<servlet-name>UpdateSellerServlet</servlet-name>
+		<url-pattern>/UpdateSellerServlet</url-pattern>
+	</servlet-mapping>
+	
+	<servlet-mapping>
+		<servlet-name>DeleteSellerServlet</servlet-name>
+		<url-pattern>/DeleteSellerServlet</url-pattern>
+	</servlet-mapping>
+	
+	<servlet-mapping>
+		<servlet-name>AddAdministratorServlet</servlet-name>
+		<url-pattern>/AddAdministratorServlet</url-pattern>
+	</servlet-mapping>
+	
+	<servlet-mapping>
+		<servlet-name>GetAdministratorServlet</servlet-name>
+		<url-pattern>/GetAdministratorServlet</url-pattern>
+	</servlet-mapping>
+	
+	<servlet-mapping>
+		<servlet-name>UpdateAdministratorServlet</servlet-name>
+		<url-pattern>/UpdateAdministratorServlet</url-pattern>
+	</servlet-mapping>
+	
+	<servlet-mapping>
+		<servlet-name>DeleteAdministratorServlet</servlet-name>
+		<url-pattern>/DeleteAdministratorServlet</url-pattern>
+	</servlet-mapping>
+	
+	<servlet-mapping>
+		<servlet-name>AddPaymentServlet</servlet-name>
+		<url-pattern>/AddPaymentServlet</url-pattern>
+	</servlet-mapping>
+	
+	<servlet-mapping>
+		<servlet-name>GetPaymentServlet</servlet-name>
+		<url-pattern>/GetPaymentServlet</url-pattern>
+	</servlet-mapping>
+	
+	<servlet-mapping>
+		<servlet-name>UpdatePaymentServlet</servlet-name>
+		<url-pattern>/UpdatePaymentServlet</url-pattern>
+	</servlet-mapping>
+	
+	<servlet-mapping>
+		<servlet-name>DeletePaymentServlet</servlet-name>
+		<url-pattern>/DeletePaymentServlet</url-pattern>
+	</servlet-mapping>
+	
+	<servlet-mapping>
+		<servlet-name>AddReviewServlet</servlet-name>
+		<url-pattern>/AddReviewServlet</url-pattern>
+	</servlet-mapping>
+	
+	<servlet-mapping>
+		<servlet-name>GetReviewServlet</servlet-name>
+		<url-pattern>/GetReviewServlet</url-pattern>
+	</servlet-mapping>
+	
+	<servlet-mapping>
+		<servlet-name>UpdateReviewServlet</servlet-name>
+		<url-pattern>/UpdateReviewServlet</url-pattern>
+	</servlet-mapping>
+	
+	<servlet-mapping>
+		<servlet-name>DeleteReviewServlet</servlet-name>
+		<url-pattern>/DeleteReviewServlet</url-pattern>
+	</servlet-mapping>
+	
+	<servlet-mapping>
+		<servlet-name>AdminLoginServlet</servlet-name>
+		<url-pattern>/AdminLoginServlet</url-pattern>
+	</servlet-mapping>
+	
+	<servlet-mapping>
+		<servlet-name>AdminLogoutServlet</servlet-name>
+		<url-pattern>/AdminLogoutServlet</url-pattern>
+	</servlet-mapping>
+	
+	<servlet-mapping>
+		<servlet-name>AddCustomerServlet</servlet-name>
+		<url-pattern>/AddCustomerServlet</url-pattern>
+	</servlet-mapping>
+	
+	<servlet-mapping>
+		<servlet-name>GetCustomerServlet</servlet-name>
+		<url-pattern>/GetCustomerServlet</url-pattern>
+	</servlet-mapping>
+	
+	<servlet-mapping>
+		<servlet-name>UpdateCustomerServlet</servlet-name>
+		<url-pattern>/UpdateCustomerServlet</url-pattern>
+	</servlet-mapping>
+	
+	<servlet-mapping>
+		<servlet-name>DeleteCustomerServlet</servlet-name>
+		<url-pattern>/DeleteCustomerServlet</url-pattern>
+	</servlet-mapping>
+	
+	<servlet-mapping>
+		<servlet-name>CustomerLoginServlet</servlet-name>
+		<url-pattern>/CustomerLoginServlet</url-pattern>
+	</servlet-mapping>
+	
+	<servlet-mapping>
+		<servlet-name>CustomerLogoutServlet</servlet-name>
+		<url-pattern>/CustomerLogoutServlet</url-pattern>
+	</servlet-mapping>
+	
+	<servlet-mapping>
+		<servlet-name>AddCartServlet</servlet-name>
+		<url-pattern>/AddCartServlet</url-pattern>
+	</servlet-mapping>
+	
+	<servlet-mapping>
+		<servlet-name>GetItemFrontServlet</servlet-name>
+		<url-pattern>/GetItemFrontServlet</url-pattern>
+	</servlet-mapping>
+	
+	<servlet-mapping>
+		<servlet-name>DeleteCartServlet</servlet-name>
+		<url-pattern>/DeleteCartServlet</url-pattern>
+	</servlet-mapping>
+
+</web-app>

@@ -1,0 +1,157 @@
+@charset "ISO-8859-1";
+
+
+.box1{
+   
+   width:600px;
+   height:875px;
+   background: rgba(0, 0, 0,0.9);
+   border-radius:10%;
+   color: #fff;
+   top: 80%;
+   left: 50%;
+   position: absolute;
+   transform: translate(-50%,-50%);
+   box-sizing:border-box;
+   padding:40px 20px;
+} 
+
+.box1 input{
+    width: 100%;
+    margin-bottom: 30px;
+ }
+
+.box1 input[type="text"]
+ {
+  border: none;
+  border-bottom: 1px solid #fff;
+  background: transparent;
+  outline: none;
+  height: 40px;
+  color : #fff;
+  font-size:16px; 
+}
+
+.box1 input[type="phone"]
+ {
+  border: none;
+  border-bottom: 1px solid #fff;
+  background: transparent;
+  outline: none;
+  height: 40px;
+  color : #fff;
+  font-size:16px; 
+}
+.box1 input[type="submit"]
+  {
+    position:center;
+    width:100%;
+    border:none;
+    outline:none;
+    height:40px;
+    background:#AA0000;
+    color: #fff;
+    font-size:18px;
+    border-radius:20px;
+  }
+.box1 a{
+   color:#fff;
+   font-size:16px;
+   text-decoration:none;
+ }
+.box1 a:hover{
+   color:#ddd;
+}
+.box1 input[type="submit"]:hover{
+   curser:pointer;
+   background: #ddd;
+   color:#000;
+   
+}
+.box1 input[type="reset"]
+{
+    boder-align:center;
+    width:100%;
+    border:none;
+    outline:none;
+    height:40px;
+    background:#AA0000;
+    color: #fff;
+    font-size:18px;
+    border-radius:20px;
+}
+  
+.box1 input[type="reset"]:hover{
+   curser:pointer;
+   background:#ddd;
+   color:#000;
+}
+
+.box1 input[type="email"]
+{
+  border: none;
+  border-bottom: 1px solid #fff;
+  background: transparent;
+  outline: none;
+  height: 40px;
+  color : #fff;
+  font-size:16px; 
+}
+
+.box1 input[type="password"]
+{
+  border: none;
+  border-bottom: 1px solid #fff;
+  background: transparent;
+  outline: none;
+  height: 40px;
+  color : #fff;
+  font-size:16px; 
+}
+
+.box1 input[type="cpassword"]
+{
+  border: none;
+  border-bottom: 1px solid #fff;
+  background: transparent;
+  outline: none;
+  height: 40px;
+  color : #fff;
+  font-size:16px; 
+}
+
+.para{
+  margin:0;
+  padding:0px 20px;
+  font-size:17px;
+  text-align:left;
+}
+.box1 input[type="checkbox"]
+{
+	position:absolute;
+	left:-280px;
+}
+
+.image{
+	position:absolute;
+	left:75%;
+	top:50%;
+}
+
+
+.image img{
+	width:200px;
+	height:200px;
+
+}
+.image button{
+	position:absolute;
+	text-decoration:none;
+	top:110%;
+	left:21%;
+	border:none;
+	font-color:white;
+}	
+.space{
+	padding:550px 550px;
+}

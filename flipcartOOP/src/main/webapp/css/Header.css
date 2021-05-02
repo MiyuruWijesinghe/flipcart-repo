@@ -1,0 +1,55 @@
+.Logd input[type="submit"]
+  {
+    border:none;
+    outline:none;
+    height:28px;
+    background:#fff;
+    color: #804000;
+    font-size:18px;
+    border-radius:10px;
+  }
+.Logd a:hover{
+   color:#ddd;
+}
+.Logd input[type="submit"]:hover{
+   curser:pointer;
+
+   color:#000;
+   
+}
+.logbox{
+   
+   width:60px;
+   height:90px;
+   background: rgba(0, 0, 0,0);
+   border-radius:1%;
+   color: #fff;
+   top: 20%;
+   left: 3%;
+   position: absolute;
+   transform: translate(-50%,-50%);
+   box-sizing:border-box;
+   padding:60px 20px;
+   font-size:20px;
+   
+} 
+.logbox1 input[type="submit"]
+  {
+    border:none;
+    outline:none;
+    height:60px;
+    background:#fff;
+    color: #ADD8E6;
+    font-size:50px;
+    border-radius:1px;
+    font-family: "Times New Roman", Times, serif;	
+  }
+.logbox1 a:hover{
+   color:#ddd;
+}
+.logbox1 input[type="submit"]:hover{
+   curser:pointer;
+
+   color:#000;
+   
+}
